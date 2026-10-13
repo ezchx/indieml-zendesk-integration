@@ -8,8 +8,8 @@ A native Zendesk integration that evaluates ticket text for substance, depth, an
 
 IndieML acts as a high-speed filter directly inside the Zendesk ticket interface. When an agent opens a ticket, IndieML evaluates the ticket text and returns a normalized substance score (0.00 to 1.00) in under 30ms:
 
-- **Low Substance (< 0.40):** Ambiguous, thin, or low-information content that likely needs clarifying detail.
-- **Moderate Substance (0.40 - 0.70):** Standard conversational context.
+- **Low Substance (< 0.25):** Ambiguous, thin, or low-information content that likely needs clarifying detail.
+- **Moderate Substance (0.25 - 0.70):** Standard conversational context.
 - **High Substance (> 0.70):** Dense, actionable, detail-rich context.
 
 ---
