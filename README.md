@@ -25,7 +25,7 @@ No servers, webhooks, or middleware required. This deploys the client-side Zende
    - In Zendesk, navigate to **Admin Center** (`/admin`).
    - In the left sidebar, go to **Apps and integrations** > **Apps** > **Zendesk Support apps**.
    - Click **Upload Private App** in the upper-right corner.
-   - Enter `Substance Scoring by IndieML` and select the `.zip` file.
+   - Enter `Substance Scoring by IndieML` as the App Name and select the `indieml-zendesk-integration.zip` file.
 
 3. **Configure Your API Key:**
    - Enter your `api_key` when prompted.
