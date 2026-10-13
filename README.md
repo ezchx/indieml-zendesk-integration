@@ -20,7 +20,7 @@ Click [here](https://indieml.app/#api-key) to get your free IndieML API key. Cop
 
 ---
 
-## 60-Second Installation (Agent UI Plugin)
+## Quick Installation (Agent UI Plugin)
 
 No servers, webhooks, or middleware required. This deploys the client-side Zendesk App Framework (ZAF) sidebar widget.
 
