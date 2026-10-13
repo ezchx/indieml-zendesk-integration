@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://static.zdassets.com/zendesk_app_framework_sdk/2.0/zaf_sdk.min.js"></script>
+  <style>
+    body { font-family: system-ui, sans-serif; padding: 10px; }
+    .score-box { font-size: 24px; font-weight: bold; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h3>IndieML Substance Scoring</h3>
+  <div id="content">Loading ticket data...</div>
+  <div class="score-box" id="score">--</div>
+
+  <script>
+    // Initialize the ZAF Client
+    const client = ZAFClient.init();
+
+    client.invoke('resize', { width: '100%', height: '150px' });
+
+    // Get the ticket description
+    client.get('ticket.description').then(function(data) {
+      const ticketText = data['ticket.description'];
+      
+      if (!ticketText) {
+        document.getElementById('content').innerText = "No text found.";
+        return;
+      }
+
+      document.getElementById('content').innerText = "Analyzing text...";
+
+      // Call the IndieML API
+      const settings = {
+        url: 'https://indieml.app/v1/score/substance',
+        type: 'POST',
+        contentType: 'application/json',
+        secure: true,
+        headers: { 'X-API-KEY': '{{setting.api_key}}' },
+        data: JSON.stringify({ input_text: ticketText })
+      };
+
+      client.request(settings).then(function(response) {
+         const score = response.result.substance_score;
+         document.getElementById('content').innerText = "Substance Score:";
+         document.getElementById('score').innerText = score;
+         
+         // Color code the result
+         if(score < 0.3) document.getElementById('score').style.color = 'red';
+         else if(score > 0.7) document.getElementById('score').style.color = 'green';
+         else document.getElementById('score').style.color = 'orange';
+         
+      }).catch(function(error) {
+         document.getElementById('content').innerText = "Error analyzing text.";
+         console.error(error);
+      });
+    });
+  </script>
+</body>
+</html>
