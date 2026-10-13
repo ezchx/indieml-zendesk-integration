@@ -14,6 +14,12 @@ IndieML acts as a high-speed filter directly inside the Zendesk ticket interface
 
 ---
 
+## Prerequisite: Request API Key
+Before starting, you need an API key to authenticate the connection.
+Click [here](https://indieml.app/#api-key) to get your free IndieML API key. Copy the key and keep it handy for the configuration step.
+
+---
+
 ## 60-Second Installation (Agent UI Plugin)
 
 No servers, webhooks, or middleware required. This deploys the client-side Zendesk App Framework (ZAF) sidebar widget.
