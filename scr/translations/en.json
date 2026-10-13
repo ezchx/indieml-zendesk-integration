@@ -1,0 +1,11 @@
+{
+  "app": {
+    "name": "Substance Scoring by IndieML",
+    "short_description": "Analyze ticket text for substance, depth, and clarity.",
+    "description": "IndieML is a lightweight, high-speed API designed to score and filter text by substance in real time.",
+    "installation_instructions": "Enter your IndieML API key to authenticate. No further configuration is required."
+  }
+}
+
+
+
