@@ -45,7 +45,7 @@ Open any ticket in your Support workspace; the IndieML widget will appear in the
 
 - **Zero Middleware:** Runs entirely via the Zendesk Apps Framework (ZAF) client.
 - **Secure Token Proxy:** Your API key is stored securely in Zendesk’s encrypted backend parameters (`secure: true`). The key is never exposed to browser dev tools or client-side scripts.
-- **Stateless & Ephemeral:** IndieML does not store, log, or persist customer ticket text. Inputs are evaluated in-memory and discarded immediately after the score is generated.
+- **Stateless & Ephemeral:** IndieML does not store, log, or persist customer ticket data. Inputs are evaluated in-memory and discarded immediately after the score is generated.
 - **Restricted Traffic:** Outbound calls are locked to `indieml.app` via `domainWhitelist`.
 
 ---
