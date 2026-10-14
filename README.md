@@ -28,14 +28,21 @@ No servers, webhooks, or middleware required, simply deploy our client-side Zend
    Download [`indieml-zendesk-integration.zip`](dist/indieml-zendesk-integration.zip) from this repo.
 
 2. **Upload to Zendesk:**
-   - In Zendesk, navigate to **Admin Center** (`/admin`).
+   - In Zendesk, click the upper left dropdown menu and select **Admin center**.
    - In the left sidebar, go to **Apps and integrations** > **Apps** > **Zendesk Support apps**.
    - Click **Upload Private App** in the upper-right corner.
    - Enter `Substance Scoring by IndieML` as the App Name and select the `indieml-zendesk-integration.zip` file.
+   - Under **Creating a new App**, click **Upload**.
 
 3. **Configure Your API Key:**
-   - Enter your `api_key` when prompted.
+   - On the **Zendesk Marketplace** screen, enter your API key.
    - Click **Install**.
+  
+4. **Launch the App:**
+   - Click the upper left dropdown menu and select **Support**.
+   - Click any customer ticket.
+   - On the far right vertical menu, click the **Apps** icon.
+   - The IndieML substance scoring app will appear in the right sidebar including a substance score for the current customer ticket.
 
 Open any ticket in your Support workspace; the IndieML widget will appear in the right-hand apps tray.
 
