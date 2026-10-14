@@ -44,8 +44,6 @@ No servers, webhooks, or middleware required, simply deploy our client-side Zend
    - On the far right vertical menu, click the **Apps** icon.
    - The IndieML substance scoring app will appear in the right sidebar including a substance score for the current customer ticket.
 
-Open any ticket in your Support workspace; the IndieML widget will appear in the right-hand apps tray.
-
 ---
 
 ## Security & Architecture
